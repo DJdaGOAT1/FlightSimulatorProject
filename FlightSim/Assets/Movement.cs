@@ -6,6 +6,7 @@ using UnityEngine;
 
 public class Movement : MonoBehaviour
 {
+    private ParticleSystem particleSystem;
     public float speed = 1f; // Starting speed
     public float maxSpeed = 100f; // Maximum speed
     public float minSpeed = 0.1f; // Minimum speed
@@ -15,6 +16,7 @@ public class Movement : MonoBehaviour
 
     void Start() {
         transform.position = new Vector3(0.0f, 1.0f, 200f);
+        particleSystem = GetComponent<ParticleSystem>();
     }
     
     void Update()
@@ -80,16 +82,16 @@ public class Movement : MonoBehaviour
         }
         else if(transform.position.y <= 1 && speed > 0.2f && transform.localRotation.eulerAngles.x > 5 && transform.localRotation.eulerAngles.x < 90) {
             transform.position += transform.forward * speed * 0 * Time.deltaTime;
-
+            if (GetComponent<UnityEngine.ParticleSystem>() != null)
+            {
+                // Play the particle system
+                GetComponent<UnityEngine.ParticleSystem>().Play();
+            }
+            else
+            {
+                Debug.LogError("ParticleSystem component not found.");
+            }
         }
 
-    }
-     void Explode() {
-        // Implement explosion logic here
-        Debug.Log("BOOM! The plane has exploded due to a crash.");
-        // You can trigger particle effects, play sound, etc. here.
-
-        // Optionally, destroy the plane gameObject
-        Destroy(gameObject);
     }
 }

@@ -1,4 +1,4 @@
-﻿using System.Collections;
+﻿/* using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -81,3 +81,4 @@ public class PlaneCamera : MonoBehaviour {
         cameraTransform.localRotation = rotation * turningRotation;                 //calculate camera rotation
     }
 }
+*/
