@@ -8,7 +8,7 @@ public class Movement : MonoBehaviour
 {
     public float speed = 1f; // Starting speed
     public float maxSpeed = 100f; // Maximum speed
-    public float minSpeed = 1f; // Minimum speed
+    public float minSpeed = 0.1f; // Minimum speed
     public float goingupdownSpeed = 0.5f; 
     public float acceleration = 5f; // Speed increment
     public float rotSpeed = 20f;
@@ -20,90 +20,76 @@ public class Movement : MonoBehaviour
     void Update()
     {
         // Movements
-        if(Input.GetKey(KeyCode.W)) {
+        if(Input.GetKey("w")) {
             transform.position += transform.forward * speed * Time.deltaTime; // Move forward
         }
 
-        if(Input.GetKey(KeyCode.A)) {
+        if(Input.GetKey("a")) {
             transform.position -= transform.right * speed * Time.deltaTime; // Move left
         }
 
-        if(Input.GetKey(KeyCode.S)) {
+        if(Input.GetKey("s")) {
             transform.position -= transform.forward * speed * Time.deltaTime; // Move backward
         }
 
-        if(Input.GetKey(KeyCode.D)) {
+        if(Input.GetKey("d")) {
             transform.position += transform.right * speed * Time.deltaTime; // Move right
         }
 
         // Handle speed increase and decrease
-        if (Input.GetKey(KeyCode.Z))
+        if (Input.GetKey("z"))
         {
             speed = Mathf.Min(speed + (acceleration * Time.deltaTime), maxSpeed);
         }
-        else if (Input.GetKey(KeyCode.X))
+        else if (Input.GetKey("x"))
         {
             speed = Mathf.Max(speed - (acceleration * Time.deltaTime), minSpeed);
         }
 
         // Rotations
-        if (Input.GetKey(KeyCode.UpArrow)) // pitch axis
+        if (Input.GetKey("up")) // pitch axis
         {
-            if(Input.GetKey(KeyCode.W)) {
-               transform.Rotate(Vector3.left, (rotSpeed * Time.deltaTime)); 
-            }
-            else {
-                transform.Rotate(Vector3.left, (rotSpeed * Time.deltaTime));
-                transform.position += transform.forward * speed * Time.deltaTime;
-            }
+            transform.Rotate(Vector3.left, (rotSpeed * Time.deltaTime));
+        }
+        if (Input.GetKey("down") && transform.position.y > 1) // pitch axis
+        {
+            transform.Rotate(Vector3.right, (rotSpeed * Time.deltaTime));
+        }
+        if (Input.GetKey("left")) // yawing
+        {
+            transform.Rotate(Vector3.up, -rotSpeed * Time.deltaTime); 
+        }
+        if (Input.GetKey("right")) // yawing
+        {
+            transform.Rotate(Vector3.up, rotSpeed * Time.deltaTime); 
+           
+        }
+        if (Input.GetKey("o")) {// rolling
+            transform.Rotate(Vector3.forward, -rotSpeed * Time.deltaTime);
+        }
+        if (Input.GetKey("p")) { // rolling
+            transform.Rotate(Vector3.forward, rotSpeed * Time.deltaTime);
+        }
+        if(Input.GetKey("a") || Input.GetKey("d")) {
+            transform.position += Vector3.up * Time.deltaTime;
         }
         
-        if (Input.GetKey(KeyCode.DownArrow)) // pitch axis
-        {
-            if(Input.GetKey(KeyCode.S)) {
-               transform.Rotate(Vector3.right, (rotSpeed * Time.deltaTime)); 
-            }
-            else {
-                transform.Rotate(Vector3.right, (rotSpeed * Time.deltaTime));
-                transform.position += transform.forward * speed * Time.deltaTime;
-            }
-        }
-        if (Input.GetKey(KeyCode.LeftArrow)) // yawing
-        {
-            if(Input.GetKey(KeyCode.A)) {
-               transform.Rotate(Vector3.up, (-rotSpeed * Time.deltaTime)); 
-            }
-            else {
-                transform.Rotate(Vector3.up, -rotSpeed * Time.deltaTime); 
-                transform.position += transform.forward * speed * Time.deltaTime;
-            }
-        }
-        if (Input.GetKey(KeyCode.RightArrow)) // yawing
-        {
-           if(Input.GetKey(KeyCode.D)) {
-               transform.Rotate(Vector3.up, (rotSpeed * Time.deltaTime)); 
-            }
-           else {
-               transform.Rotate(Vector3.up, rotSpeed * Time.deltaTime); 
-               transform.position += transform.forward * speed * Time.deltaTime;
-           }
-        }
-        if (Input.GetKey(KeyCode.O)) { // rolling
-            transform.Rotate(Vector3.forward, -rotSpeed * Time.deltaTime);
-            transform.position += transform.forward * speed * Time.deltaTime;
-        }
-        if (Input.GetKey(KeyCode.P)) { // rolling
-            transform.Rotate(Vector3.forward, rotSpeed * Time.deltaTime);
-            transform.position += transform.forward * speed * Time.deltaTime;
-        }
-
         else if(transform.position.y > 1) {
-            transform.position += transform.forward * (speed) * Time.deltaTime;
+            transform.position += transform.forward * speed * Time.deltaTime;
             transform.position += Vector3.down * Time.deltaTime;
         }
-        /*if (transform.position.y > 0)
-        {
-            transform.position += Vector3.down * 9.81f * Time.deltaTime; // Applying gravity
-        }*/
+        else if(transform.position.y <= 1 && speed > 0.2f && transform.localRotation.eulerAngles.x > 5 && transform.localRotation.eulerAngles.x < 90) {
+            transform.position += transform.forward * speed * 0 * Time.deltaTime;
+
+        }
+
+    }
+     void Explode() {
+        // Implement explosion logic here
+        Debug.Log("BOOM! The plane has exploded due to a crash.");
+        // You can trigger particle effects, play sound, etc. here.
+
+        // Optionally, destroy the plane gameObject
+        Destroy(gameObject);
     }
 }

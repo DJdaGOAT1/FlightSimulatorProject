@@ -12,6 +12,7 @@ public class MoveCam : MonoBehaviour
     void Update()
     {
         transform.position = camera.position + myPos;
+        
 
         //transform.forward = cameraPosition.forward;
         
