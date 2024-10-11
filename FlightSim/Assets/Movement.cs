@@ -6,23 +6,31 @@ using UnityEngine;
 
 public class Movement : MonoBehaviour
 {
-    private ParticleSystem particleSystem;
+    public GameObject gameObject;
+    Rigidbody rb;
     public float speed = 1f; // Starting speed
     public float maxSpeed = 100f; // Maximum speed
     public float minSpeed = 0.1f; // Minimum speed
     public float goingupdownSpeed = 0.5f; 
     public float acceleration = 5f; // Speed increment
     public float rotSpeed = 20f;
+    public float lift = 20f;
 
     void Start() {
         transform.position = new Vector3(0.0f, 1.0f, 200f);
-        particleSystem = GetComponent<ParticleSystem>();
+        rb = GetComponent<Rigidbody>();
     }
     
-    void Update()
+    void FixedUpdate()
     {
+        if(transform.position.y <= 1 && speed > 0.2f && transform.localRotation.eulerAngles.x > 10 && transform.localRotation.eulerAngles.x < 90) {
+            transform.position += transform.forward * speed * 0 * Time.deltaTime;
+        }
         // Movements
-        if(Input.GetKey("w")) {
+        if(transform.position.y > 1) {
+            transform.position += transform.forward * speed * Time.deltaTime;
+        }
+        if(Input.GetKey("w") && transform.position.y <= 1) {
             transform.position += transform.forward * speed * Time.deltaTime; // Move forward
         }
 
@@ -43,7 +51,7 @@ public class Movement : MonoBehaviour
         {
             speed = Mathf.Min(speed + (acceleration * Time.deltaTime), maxSpeed);
         }
-        else if (Input.GetKey("x"))
+        if (Input.GetKey("x"))
         {
             speed = Mathf.Max(speed - (acceleration * Time.deltaTime), minSpeed);
         }
@@ -75,23 +83,6 @@ public class Movement : MonoBehaviour
         if(Input.GetKey("a") || Input.GetKey("d")) {
             transform.position += Vector3.up * Time.deltaTime;
         }
-        
-        else if(transform.position.y > 1) {
-            transform.position += transform.forward * speed * Time.deltaTime;
-            transform.position += Vector3.down * Time.deltaTime;
-        }
-        else if(transform.position.y <= 1 && speed > 0.2f && transform.localRotation.eulerAngles.x > 5 && transform.localRotation.eulerAngles.x < 90) {
-            transform.position += transform.forward * speed * 0 * Time.deltaTime;
-            if (GetComponent<UnityEngine.ParticleSystem>() != null)
-            {
-                // Play the particle system
-                GetComponent<UnityEngine.ParticleSystem>().Play();
-            }
-            else
-            {
-                Debug.LogError("ParticleSystem component not found.");
-            }
-        }
-
+       
     }
 }
