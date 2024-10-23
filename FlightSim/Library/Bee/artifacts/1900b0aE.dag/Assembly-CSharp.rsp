@@ -348,7 +348,7 @@
 "Assets/Explosion.cs"
 "Assets/Fuel.cs"
 "Assets/Movement.cs"
-"Assets/PlaneCamera.cs"
+"Assets/PlayerCollision.cs"
 "Assets/Samples/Cinemachine/2.9.7/Cinemachine Example Scenes/Scenes/2D/LoseSightWhenTargetsFallsOffThePlatform.cs"
 "Assets/Samples/Cinemachine/2.9.7/Cinemachine Example Scenes/Scenes/2D/MouseScrollZoom2D.cs"
 "Assets/Samples/Cinemachine/2.9.7/Cinemachine Example Scenes/Scenes/3rdPersonWithAimMode/ActivateOnKeypress.cs"

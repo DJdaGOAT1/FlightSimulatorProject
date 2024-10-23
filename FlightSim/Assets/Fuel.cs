@@ -15,7 +15,7 @@ public class Fuel : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-        if(Input.GetKey("z")) fuel.Play();
-        else fuel.Clear();
+        if(Input.GetKey("w")) fuel.Play();
+        else fuel.Stop();
     }
 }
