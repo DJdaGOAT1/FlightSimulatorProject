@@ -9,7 +9,7 @@ public class Movement : MonoBehaviour
     public GameObject gameObject;
     private ParticleSystem explosion;
     public Transform explosionPrefab;
-    Rigidbody rb;
+    Rigidbody Rb;
     public float speed = 0.0001f; // Starting speed
     public float maxSpeed = 100f; // Maximum speed
     public float minSpeed = 0.1f; // Minimum speed
@@ -18,7 +18,7 @@ public class Movement : MonoBehaviour
 
     void Start() {
         transform.position = new Vector3(0.0f, 1.0f, 200f);
-        rb = GetComponent<Rigidbody>();
+        Rb = GetComponent<Rigidbody>();
         explosion = GameObject.Find("Explosion").GetComponent<ParticleSystem>();
         isStopforExplosion = false;
     }
