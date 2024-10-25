@@ -14,12 +14,13 @@ public class Movement : MonoBehaviour
     public float maxSpeed = 100f; // Maximum speed
     public float minSpeed = 0.1f; // Minimum speed
     public float acceleration = 1f; // Speed increment 
-    private bool explosion1; // Update is called once per frame
+    private bool isStopforExplosion; // Update is called once per frame
 
     void Start() {
         transform.position = new Vector3(0.0f, 1.0f, 200f);
         rb = GetComponent<Rigidbody>();
         explosion = GameObject.Find("Explosion").GetComponent<ParticleSystem>();
+        isStopforExplosion = false;
     }
     /*void OnCollisionEnter(Collision collision)
     {
@@ -39,10 +40,10 @@ public class Movement : MonoBehaviour
     }*/
     void FixedUpdate()
     {
-        if(transform.position.y <= 1f && speed > 0.2f && transform.localRotation.eulerAngles.x > 10 && transform.localRotation.eulerAngles.x < 90) {
-            var explosionDuration = explosion.main;
-            explosionDuration.duration = 1f;
+        if(transform.position.y <= 1f && isStopforExplosion == false && speed > 0.2f && transform.localRotation.eulerAngles.x > 10 && transform.localRotation.eulerAngles.x < 90) {
+            isStopforExplosion = true;
             explosion.Play();
+            transform.position += transform.forward * speed * 0 * Time.deltaTime;
         }
         // Movements
         if(Input.GetKey("w") && transform.position.y >= 0.9f) {
