@@ -8,6 +8,7 @@ public class Movement : MonoBehaviour
 {
     public GameObject gameObject;
     private ParticleSystem explosion;
+    private ParticleSystem postExplosion;
     public Transform explosionPrefab;
     Rigidbody Rb;
     public float speed = 0.0001f; // Starting speed
@@ -16,34 +17,22 @@ public class Movement : MonoBehaviour
     public float acceleration = 1f; // Speed increment 
     private bool isStopforExplosion; // Update is called once per frame
 
+
     void Start() {
         transform.position = new Vector3(0.0f, 1.0f, 200f);
         Rb = GetComponent<Rigidbody>();
         explosion = GameObject.Find("Explosion").GetComponent<ParticleSystem>();
+        postExplosion = GameObject.Find("PostExplosion").GetComponent<ParticleSystem>();
         isStopforExplosion = false;
     }
-    /*void OnCollisionEnter(Collision collision)
-    {
-        explosion1 = true;
-        while(explosion1 != false) {
-            if(explosion1 == true && collision.gameObject.CompareTag("whatisground") && speed > 0.2f && transform.localRotation.eulerAngles.x > 10 && transform.localRotation.eulerAngles.x < 90) 
-            {
-                ContactPoint contact = collision.contacts[0];
-                Quaternion rotation = Quaternion.FromToRotation(Vector3.up, contact.normal);
-                Vector3 position = contact.point;
-                explosion.Play();
-                Destroy(gameObject);
-            }
-        }
-        explosion.Stop();
-        transform.position += transform.forward * speed * 0 * Time.deltaTime;
-    }*/
+    
     void FixedUpdate()
     {
         if(transform.position.y <= 1f && isStopforExplosion == false && speed > 0.2f && transform.localRotation.eulerAngles.x > 10 && transform.localRotation.eulerAngles.x < 90) {
             isStopforExplosion = true;
             explosion.Play();
             transform.position += transform.forward * speed * 0 * Time.deltaTime;
+            postExplosion.Play();
         }
         // Movements
         if(Input.GetKey("w") && transform.position.y >= 0.9f) {
