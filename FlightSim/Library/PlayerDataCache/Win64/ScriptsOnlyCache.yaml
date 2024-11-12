@@ -1,44 +1,45 @@
 ScriptsOnlyBuild:
   usedScripts:
     Assembly-CSharp.dll:
+    - ButtonScript
     - Fuel
     - Movement
     Unity.TerrainTools.Editor.dll:
     - UnityEditor.TerrainTools.BillowNoise
-    - UnityEditor.TerrainTools.BridgeTool
-    - UnityEditor.TerrainTools.CloneBrushTool
-    - UnityEditor.TerrainTools.ContrastTool
-    - UnityEditor.TerrainTools.DetailScatterTool
     - UnityEditor.TerrainTools.FbmFractalType
-    - UnityEditor.TerrainTools.HydroErosionTool
     - UnityEditor.TerrainTools.NoiseBlitShaderGenerator
     - UnityEditor.TerrainTools.NoiseFillShaderGenerator
-    - UnityEditor.TerrainTools.NoiseHeightTool
     - UnityEditor.TerrainTools.NoneFractalType
-    - UnityEditor.TerrainTools.PaintHeightTool
-    - UnityEditor.TerrainTools.PaintHolesTool
-    - UnityEditor.TerrainTools.PaintTextureTool
     - UnityEditor.TerrainTools.PerlinNoise
-    - UnityEditor.TerrainTools.PinchHeightTool
     - UnityEditor.TerrainTools.RidgeNoise
-    - UnityEditor.TerrainTools.SetHeightTool
-    - UnityEditor.TerrainTools.SharpenPeaksTool
-    - UnityEditor.TerrainTools.SlopeFlattenTool
-    - UnityEditor.TerrainTools.SmoothHeightTool
-    - UnityEditor.TerrainTools.SmudgeHeightTool
-    - UnityEditor.TerrainTools.StampTool
     - UnityEditor.TerrainTools.StrataFractalType
-    - UnityEditor.TerrainTools.TerraceErosion
-    - UnityEditor.TerrainTools.ThermalErosionTool
-    - UnityEditor.TerrainTools.TwistHeightTool
     - UnityEditor.TerrainTools.ValueNoise
     - UnityEditor.TerrainTools.VoronoiNoise
-    - UnityEditor.TerrainTools.WindErosionTool
     UnityEditor.TestRunner.dll:
     - UnityEditor.TestTools.TestRunner.Api.CallbacksHolder
     - UnityEditor.TestTools.TestRunner.TestListCacheData
     - UnityEditor.TestTools.TestRunner.TestRun.TestJobDataHolder
+    UnityEngine.UI.dll:
+    - UnityEngine.EventSystems.EventSystem
+    - UnityEngine.EventSystems.StandaloneInputModule
+    - UnityEngine.UI.Button
+    - UnityEngine.UI.CanvasScaler
+    - UnityEngine.UI.GraphicRaycaster
+    - UnityEngine.UI.Image
+    - UnityEngine.UI.Text
   serializedClasses:
+    UnityEngine.CoreModule:
+    - UnityEngine.Events.ArgumentCache
+    - UnityEngine.Events.PersistentCallGroup
+    - UnityEngine.Events.PersistentListenerMode
+    UnityEngine.UI:
+    - UnityEngine.UI.AnimationTriggers
+    - UnityEngine.UI.Button/ButtonClickedEvent
+    - UnityEngine.UI.ColorBlock
+    - UnityEngine.UI.FontData
+    - UnityEngine.UI.MaskableGraphic/CullStateChangedEvent
+    - UnityEngine.UI.Navigation
+    - UnityEngine.UI.SpriteState
     UnityEngine.UIElementsModule:
     - UnityEngine.UIElements.DynamicAtlasSettings
     - UnityEngine.UIElements.StyleComplexSelector
@@ -52,7 +53,16 @@ ScriptsOnlyBuild:
     - UnityEngine.UIElements.StyleValueHandle
     - UnityEngine.UIElements.UxmlRootElementFactory
     - UnityEngine.UIElements.VisualElementAsset
-  methodsToPreserve: []
+  methodsToPreserve:
+  - assembly: Assembly-CSharp
+    fullTypeName: ButtonScript
+    methodName: GoToScene
+  - assembly: Assembly-CSharp
+    fullTypeName: ButtonScript
+    methodName: QuitApp
+  - assembly: Assembly-CSharp
+    fullTypeName: ButtonScript
+    methodName: GoToScene
   sceneClasses:
     Assets/Scenes/Game.unity:
     - Class: 1
@@ -98,7 +108,7 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 1656}
     - Class: 114
-      Script: {instanceID: 5350}
+      Script: {instanceID: 5352}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -116,6 +126,132 @@ ScriptsOnlyBuild:
     - Class: 199
       Script: {instanceID: 0}
     - Class: 218
+      Script: {instanceID: 0}
+    Assets/Scenes/How To Play.unity:
+    - Class: 1
+      Script: {instanceID: 0}
+    - Class: 4
+      Script: {instanceID: 0}
+    - Class: 20
+      Script: {instanceID: 0}
+    - Class: 21
+      Script: {instanceID: 0}
+    - Class: 28
+      Script: {instanceID: 0}
+    - Class: 48
+      Script: {instanceID: 0}
+    - Class: 81
+      Script: {instanceID: 0}
+    - Class: 89
+      Script: {instanceID: 0}
+    - Class: 104
+      Script: {instanceID: 0}
+    - Class: 108
+      Script: {instanceID: 0}
+    - Class: 114
+      Script: {instanceID: 720}
+    - Class: 114
+      Script: {instanceID: 722}
+    - Class: 114
+      Script: {instanceID: 724}
+    - Class: 114
+      Script: {instanceID: 746}
+    - Class: 114
+      Script: {instanceID: 748}
+    - Class: 114
+      Script: {instanceID: 1694}
+    - Class: 114
+      Script: {instanceID: 2272}
+    - Class: 114
+      Script: {instanceID: 2638}
+    - Class: 114
+      Script: {instanceID: 2806}
+    - Class: 114
+      Script: {instanceID: 2984}
+    - Class: 114
+      Script: {instanceID: 3116}
+    - Class: 114
+      Script: {instanceID: 3206}
+    - Class: 114
+      Script: {instanceID: 3324}
+    - Class: 115
+      Script: {instanceID: 0}
+    - Class: 128
+      Script: {instanceID: 0}
+    - Class: 157
+      Script: {instanceID: 0}
+    - Class: 196
+      Script: {instanceID: 0}
+    - Class: 213
+      Script: {instanceID: 0}
+    - Class: 222
+      Script: {instanceID: 0}
+    - Class: 223
+      Script: {instanceID: 0}
+    - Class: 224
+      Script: {instanceID: 0}
+    Assets/Scenes/MainMenu.unity:
+    - Class: 1
+      Script: {instanceID: 0}
+    - Class: 4
+      Script: {instanceID: 0}
+    - Class: 20
+      Script: {instanceID: 0}
+    - Class: 21
+      Script: {instanceID: 0}
+    - Class: 28
+      Script: {instanceID: 0}
+    - Class: 48
+      Script: {instanceID: 0}
+    - Class: 81
+      Script: {instanceID: 0}
+    - Class: 89
+      Script: {instanceID: 0}
+    - Class: 104
+      Script: {instanceID: 0}
+    - Class: 108
+      Script: {instanceID: 0}
+    - Class: 114
+      Script: {instanceID: 720}
+    - Class: 114
+      Script: {instanceID: 722}
+    - Class: 114
+      Script: {instanceID: 724}
+    - Class: 114
+      Script: {instanceID: 746}
+    - Class: 114
+      Script: {instanceID: 748}
+    - Class: 114
+      Script: {instanceID: 1694}
+    - Class: 114
+      Script: {instanceID: 2272}
+    - Class: 114
+      Script: {instanceID: 2638}
+    - Class: 114
+      Script: {instanceID: 2806}
+    - Class: 114
+      Script: {instanceID: 2984}
+    - Class: 114
+      Script: {instanceID: 3116}
+    - Class: 114
+      Script: {instanceID: 3206}
+    - Class: 114
+      Script: {instanceID: 3324}
+    - Class: 115
+      Script: {instanceID: 0}
+    - Class: 128
+      Script: {instanceID: 0}
+    - Class: 157
+      Script: {instanceID: 0}
+    - Class: 196
+      Script: {instanceID: 0}
+    - Class: 213
+      Script: {instanceID: 0}
+    - Class: 222
+      Script: {instanceID: 0}
+    - Class: 223
+      Script: {instanceID: 0}
+    - Class: 224
       Script: {instanceID: 0}
   scriptHashData:
   - hash:
@@ -508,6 +644,12 @@ ScriptsOnlyBuild:
     assemblyName: Cinemachine
     namespaceName: 
     className: CinemachineTrack
+  - hash:
+      serializedVersion: 2
+      Hash: 751e5bae2a317288c2ab58d66687092b
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: ButtonScript
   - hash:
       serializedVersion: 2
       Hash: 692a2b1df25f6c1c4df8be71d3725bf7
@@ -1042,13 +1184,9 @@ ScriptsOnlyBuild:
     assemblyName: Assembly-CSharp
     namespaceName: 
     className: Movement
-  - hash:
-      serializedVersion: 2
-      Hash: 751e5bae2a317288c2ab58d66687092b
-    assemblyName: Assembly-CSharp
-    namespaceName: 
-    className: ButtonScript
   platform: 19
   scenePathNames:
+  - Assets/Scenes/MainMenu.unity
+  - Assets/Scenes/How To Play.unity
   - Assets/Scenes/Game.unity
   playerPath: C:/Users/S925012/Downloads/New Unity Project.exe

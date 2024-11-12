@@ -24,7 +24,6 @@ public class Movement : MonoBehaviour
 
 
     void Start() {
-        GoToScene();
         transform.position = new Vector3(0.0f, 1.0f, 200f);
         Rb = GetComponent<Rigidbody>();
         explosion = GameObject.Find("Explosion").GetComponent<ParticleSystem>();
@@ -149,7 +148,5 @@ public class Movement : MonoBehaviour
         {
             activeCamera.enabled = true;
         }
-    }
-
-    
+    }  
 }
