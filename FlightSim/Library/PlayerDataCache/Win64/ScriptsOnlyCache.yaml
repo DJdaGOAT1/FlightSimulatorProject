@@ -4,17 +4,39 @@ ScriptsOnlyBuild:
     - ButtonScript
     - Fuel
     - Movement
+    Cinemachine.dll:
+    - Cinemachine.CinemachineBrain
     Unity.TerrainTools.Editor.dll:
     - UnityEditor.TerrainTools.BillowNoise
+    - UnityEditor.TerrainTools.BridgeTool
+    - UnityEditor.TerrainTools.CloneBrushTool
+    - UnityEditor.TerrainTools.ContrastTool
+    - UnityEditor.TerrainTools.DetailScatterTool
     - UnityEditor.TerrainTools.FbmFractalType
+    - UnityEditor.TerrainTools.HydroErosionTool
     - UnityEditor.TerrainTools.NoiseBlitShaderGenerator
     - UnityEditor.TerrainTools.NoiseFillShaderGenerator
+    - UnityEditor.TerrainTools.NoiseHeightTool
     - UnityEditor.TerrainTools.NoneFractalType
+    - UnityEditor.TerrainTools.PaintHeightTool
+    - UnityEditor.TerrainTools.PaintHolesTool
+    - UnityEditor.TerrainTools.PaintTextureTool
     - UnityEditor.TerrainTools.PerlinNoise
+    - UnityEditor.TerrainTools.PinchHeightTool
     - UnityEditor.TerrainTools.RidgeNoise
+    - UnityEditor.TerrainTools.SetHeightTool
+    - UnityEditor.TerrainTools.SharpenPeaksTool
+    - UnityEditor.TerrainTools.SlopeFlattenTool
+    - UnityEditor.TerrainTools.SmoothHeightTool
+    - UnityEditor.TerrainTools.SmudgeHeightTool
+    - UnityEditor.TerrainTools.StampTool
     - UnityEditor.TerrainTools.StrataFractalType
+    - UnityEditor.TerrainTools.TerraceErosion
+    - UnityEditor.TerrainTools.ThermalErosionTool
+    - UnityEditor.TerrainTools.TwistHeightTool
     - UnityEditor.TerrainTools.ValueNoise
     - UnityEditor.TerrainTools.VoronoiNoise
+    - UnityEditor.TerrainTools.WindErosionTool
     UnityEditor.TestRunner.dll:
     - UnityEditor.TestTools.TestRunner.Api.CallbacksHolder
     - UnityEditor.TestTools.TestRunner.TestListCacheData
@@ -26,8 +48,13 @@ ScriptsOnlyBuild:
     - UnityEngine.UI.CanvasScaler
     - UnityEngine.UI.GraphicRaycaster
     - UnityEngine.UI.Image
+    - UnityEngine.UI.RawImage
     - UnityEngine.UI.Text
   serializedClasses:
+    Cinemachine:
+    - Cinemachine.CinemachineBlendDefinition
+    - Cinemachine.CinemachineBrain/BrainEvent
+    - Cinemachine.CinemachineBrain/VcamActivatedEvent
     UnityEngine.CoreModule:
     - UnityEngine.Events.ArgumentCache
     - UnityEngine.Events.PersistentCallGroup
@@ -63,8 +90,23 @@ ScriptsOnlyBuild:
   - assembly: Assembly-CSharp
     fullTypeName: ButtonScript
     methodName: GoToScene
+  - assembly: Assembly-CSharp
+    fullTypeName: ButtonScript
+    methodName: GoToScene
+  - assembly: Assembly-CSharp
+    fullTypeName: ButtonScript
+    methodName: GoToScene
+  - assembly: Assembly-CSharp
+    fullTypeName: ButtonScript
+    methodName: GoToScene
+  - assembly: Assembly-CSharp
+    fullTypeName: ButtonScript
+    methodName: GoToScene
+  - assembly: Assembly-CSharp
+    fullTypeName: ButtonScript
+    methodName: GoToScene
   sceneClasses:
-    Assets/Scenes/Game.unity:
+    Assets/Scenes/City.unity:
     - Class: 1
       Script: {instanceID: 0}
     - Class: 4
@@ -96,26 +138,16 @@ ScriptsOnlyBuild:
     - Class: 108
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 720}
-    - Class: 114
-      Script: {instanceID: 722}
-    - Class: 114
-      Script: {instanceID: 724}
-    - Class: 114
-      Script: {instanceID: 746}
-    - Class: 114
-      Script: {instanceID: 748}
-    - Class: 114
       Script: {instanceID: 1656}
+    - Class: 114
+      Script: {instanceID: 2604}
+    - Class: 114
+      Script: {instanceID: 2806}
+    - Class: 114
+      Script: {instanceID: 3206}
     - Class: 114
       Script: {instanceID: 5352}
     - Class: 115
-      Script: {instanceID: 0}
-    - Class: 128
-      Script: {instanceID: 0}
-    - Class: 136
-      Script: {instanceID: 0}
-    - Class: 156
       Script: {instanceID: 0}
     - Class: 157
       Script: {instanceID: 0}
@@ -125,7 +157,50 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 199
       Script: {instanceID: 0}
-    - Class: 218
+    Assets/Scenes/Desert.unity:
+    - Class: 1
+      Script: {instanceID: 0}
+    - Class: 4
+      Script: {instanceID: 0}
+    - Class: 20
+      Script: {instanceID: 0}
+    - Class: 21
+      Script: {instanceID: 0}
+    - Class: 23
+      Script: {instanceID: 0}
+    - Class: 28
+      Script: {instanceID: 0}
+    - Class: 33
+      Script: {instanceID: 0}
+    - Class: 43
+      Script: {instanceID: 0}
+    - Class: 48
+      Script: {instanceID: 0}
+    - Class: 54
+      Script: {instanceID: 0}
+    - Class: 64
+      Script: {instanceID: 0}
+    - Class: 81
+      Script: {instanceID: 0}
+    - Class: 89
+      Script: {instanceID: 0}
+    - Class: 104
+      Script: {instanceID: 0}
+    - Class: 108
+      Script: {instanceID: 0}
+    - Class: 114
+      Script: {instanceID: 1656}
+    - Class: 114
+      Script: {instanceID: 5352}
+    - Class: 115
+      Script: {instanceID: 0}
+    - Class: 157
+      Script: {instanceID: 0}
+    - Class: 196
+      Script: {instanceID: 0}
+    - Class: 198
+      Script: {instanceID: 0}
+    - Class: 199
       Script: {instanceID: 0}
     Assets/Scenes/How To Play.unity:
     - Class: 1
@@ -162,6 +237,63 @@ ScriptsOnlyBuild:
       Script: {instanceID: 1694}
     - Class: 114
       Script: {instanceID: 2272}
+    - Class: 114
+      Script: {instanceID: 2410}
+    - Class: 114
+      Script: {instanceID: 2638}
+    - Class: 114
+      Script: {instanceID: 2806}
+    - Class: 114
+      Script: {instanceID: 2984}
+    - Class: 114
+      Script: {instanceID: 3116}
+    - Class: 114
+      Script: {instanceID: 3206}
+    - Class: 114
+      Script: {instanceID: 3324}
+    - Class: 115
+      Script: {instanceID: 0}
+    - Class: 128
+      Script: {instanceID: 0}
+    - Class: 157
+      Script: {instanceID: 0}
+    - Class: 196
+      Script: {instanceID: 0}
+    - Class: 213
+      Script: {instanceID: 0}
+    - Class: 222
+      Script: {instanceID: 0}
+    - Class: 223
+      Script: {instanceID: 0}
+    - Class: 224
+      Script: {instanceID: 0}
+    Assets/Scenes/LevelSelect.unity:
+    - Class: 1
+      Script: {instanceID: 0}
+    - Class: 4
+      Script: {instanceID: 0}
+    - Class: 20
+      Script: {instanceID: 0}
+    - Class: 21
+      Script: {instanceID: 0}
+    - Class: 28
+      Script: {instanceID: 0}
+    - Class: 48
+      Script: {instanceID: 0}
+    - Class: 81
+      Script: {instanceID: 0}
+    - Class: 89
+      Script: {instanceID: 0}
+    - Class: 104
+      Script: {instanceID: 0}
+    - Class: 108
+      Script: {instanceID: 0}
+    - Class: 114
+      Script: {instanceID: 1694}
+    - Class: 114
+      Script: {instanceID: 2272}
+    - Class: 114
+      Script: {instanceID: 2410}
     - Class: 114
       Script: {instanceID: 2638}
     - Class: 114
@@ -252,6 +384,73 @@ ScriptsOnlyBuild:
     - Class: 223
       Script: {instanceID: 0}
     - Class: 224
+      Script: {instanceID: 0}
+    Assets/Scenes/Winter.unity:
+    - Class: 1
+      Script: {instanceID: 0}
+    - Class: 4
+      Script: {instanceID: 0}
+    - Class: 20
+      Script: {instanceID: 0}
+    - Class: 21
+      Script: {instanceID: 0}
+    - Class: 23
+      Script: {instanceID: 0}
+    - Class: 28
+      Script: {instanceID: 0}
+    - Class: 33
+      Script: {instanceID: 0}
+    - Class: 43
+      Script: {instanceID: 0}
+    - Class: 48
+      Script: {instanceID: 0}
+    - Class: 54
+      Script: {instanceID: 0}
+    - Class: 64
+      Script: {instanceID: 0}
+    - Class: 81
+      Script: {instanceID: 0}
+    - Class: 89
+      Script: {instanceID: 0}
+    - Class: 104
+      Script: {instanceID: 0}
+    - Class: 108
+      Script: {instanceID: 0}
+    - Class: 114
+      Script: {instanceID: 720}
+    - Class: 114
+      Script: {instanceID: 722}
+    - Class: 114
+      Script: {instanceID: 724}
+    - Class: 114
+      Script: {instanceID: 746}
+    - Class: 114
+      Script: {instanceID: 748}
+    - Class: 114
+      Script: {instanceID: 1656}
+    - Class: 114
+      Script: {instanceID: 2806}
+    - Class: 114
+      Script: {instanceID: 3206}
+    - Class: 114
+      Script: {instanceID: 5352}
+    - Class: 115
+      Script: {instanceID: 0}
+    - Class: 128
+      Script: {instanceID: 0}
+    - Class: 136
+      Script: {instanceID: 0}
+    - Class: 156
+      Script: {instanceID: 0}
+    - Class: 157
+      Script: {instanceID: 0}
+    - Class: 196
+      Script: {instanceID: 0}
+    - Class: 198
+      Script: {instanceID: 0}
+    - Class: 199
+      Script: {instanceID: 0}
+    - Class: 218
       Script: {instanceID: 0}
   scriptHashData:
   - hash:
@@ -1180,7 +1379,7 @@ ScriptsOnlyBuild:
     className: CinemachineBlendListCamera
   - hash:
       serializedVersion: 2
-      Hash: b38c20b237607264f56430a96a7062fc
+      Hash: dd6b9bf3b5da8f5245ff49bb4da495f0
     assemblyName: Assembly-CSharp
     namespaceName: 
     className: Movement
@@ -1188,5 +1387,8 @@ ScriptsOnlyBuild:
   scenePathNames:
   - Assets/Scenes/MainMenu.unity
   - Assets/Scenes/How To Play.unity
-  - Assets/Scenes/Game.unity
-  playerPath: C:/Users/S925012/Downloads/New Unity Project.exe
+  - Assets/Scenes/LevelSelect.unity
+  - Assets/Scenes/Winter.unity
+  - Assets/Scenes/City.unity
+  - Assets/Scenes/Desert.unity
+  playerPath: C:/Users/S925012/Downloads/New Unity Project_Data/New Unity Project.exe

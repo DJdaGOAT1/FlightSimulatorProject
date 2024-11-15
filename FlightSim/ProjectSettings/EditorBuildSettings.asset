@@ -12,6 +12,15 @@ EditorBuildSettings:
     path: Assets/Scenes/How To Play.unity
     guid: d6dbc492277774e498b82f7c95e41de8
   - enabled: 1
-    path: Assets/Scenes/Game.unity
+    path: Assets/Scenes/LevelSelect.unity
+    guid: 98d4637c5a0299147aa23e19176be393
+  - enabled: 1
+    path: Assets/Scenes/Winter.unity
     guid: 4a87a66db9c0f454694ca17837cb3600
+  - enabled: 1
+    path: Assets/Scenes/City.unity
+    guid: f2a007dac5bca904e95fe88fbc0f2d75
+  - enabled: 1
+    path: Assets/Scenes/Desert.unity
+    guid: 3affebb74a7f0b940bd98d75051ab9f7
   m_configObjects: {}

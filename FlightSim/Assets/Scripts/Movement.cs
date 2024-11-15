@@ -16,7 +16,8 @@ public class Movement : MonoBehaviour
     private ParticleSystem explosion;
     private ParticleSystem postExplosion;
     Rigidbody Rb;
-    public float speed = 0.0001f; // Starting speed
+    public float speed = 0.0001f;
+    public float rotSpeed = 0.0001f; // Starting speed
     public float maxSpeed = 100f; // Maximum speed
     public float minSpeed = 0.1f; // Minimum speed
     public float acceleration = 1f; // Speed increment 
@@ -24,7 +25,6 @@ public class Movement : MonoBehaviour
 
 
     void Start() {
-        transform.position = new Vector3(0.0f, 1.0f, 200f);
         Rb = GetComponent<Rigidbody>();
         explosion = GameObject.Find("Explosion").GetComponent<ParticleSystem>();
         postExplosion = GameObject.Find("PostExplosion").GetComponent<ParticleSystem>();
@@ -50,29 +50,31 @@ public class Movement : MonoBehaviour
         // Movements
         if(Input.GetKey("w") && transform.position.y >= 0.9f) {
             speed = Mathf.Min(speed + (acceleration * Time.deltaTime), maxSpeed); // Move forward
+            rotSpeed = Mathf.Min(rotSpeed + (acceleration * Time.deltaTime), maxSpeed);
         }
 
         if(Input.GetKey("a")) {
             if(transform.position.y >= 1f)
             {
-                transform.Rotate(Vector3.up, -speed * Time.deltaTime); // Move left
+                transform.Rotate(Vector3.up, -rotSpeed * Time.deltaTime); // Move left
             }
             if(transform.position.y <= 1f && transform.localRotation.eulerAngles.x >= 0 && transform.localRotation.eulerAngles.x <= 10) {
-                transform.Rotate(Vector3.up, -speed * Time.deltaTime);
+                transform.Rotate(Vector3.up, -rotSpeed * Time.deltaTime);
             }
         }
 
         if(Input.GetKey("s") && transform.position.y >= 0.9f) {
             speed = Mathf.Max(speed - (acceleration * Time.deltaTime), minSpeed); // Move backward
+            rotSpeed = Mathf.Min(rotSpeed - (acceleration * Time.deltaTime), minSpeed);
         }
 
         if(Input.GetKey("d")) {
             if(transform.position.y >= 1f)
             {
-                transform.Rotate(Vector3.up, speed * Time.deltaTime); // Move left
+                transform.Rotate(Vector3.up, rotSpeed * Time.deltaTime); // Move left
             }
             if(transform.position.y <= 1f && transform.localRotation.eulerAngles.x >= 0 && transform.localRotation.eulerAngles.x <= 10) {
-                transform.Rotate(Vector3.up, speed * Time.deltaTime);
+                transform.Rotate(Vector3.up, rotSpeed * Time.deltaTime);
             }
         }
 
@@ -81,21 +83,21 @@ public class Movement : MonoBehaviour
         {
             if(transform.position.y >= 1f)
             {
-                transform.Rotate(Vector3.left, speed * Time.deltaTime); 
+                transform.Rotate(Vector3.left, rotSpeed * Time.deltaTime); 
             }
             if(transform.position.y <= 1f && transform.localRotation.eulerAngles.x >= 0 && transform.localRotation.eulerAngles.x <= 10) {
-                transform.Rotate(Vector3.up, speed * Time.deltaTime);
+                transform.Rotate(Vector3.up, rotSpeed * Time.deltaTime);
             }
         }
         if (Input.GetKey("down") && transform.position.y > 1) // pitch axis
         {
-            transform.Rotate(Vector3.right, speed * Time.deltaTime);
+            transform.Rotate(Vector3.right, rotSpeed * Time.deltaTime);
         }
         if (Input.GetKey("left") && transform.position.y > 1.5f) { // rolling
-            transform.Rotate(Vector3.forward, speed * Time.deltaTime);
+            transform.Rotate(Vector3.forward, rotSpeed * Time.deltaTime);
         }
         if (Input.GetKey("right") && transform.position.y > 1.5f ) {// rolling
-            transform.Rotate(Vector3.forward, -speed * Time.deltaTime);
+            transform.Rotate(Vector3.forward, -rotSpeed * Time.deltaTime);
         }
 
         if(transform.position.y >= 0.9f && speed != 0f) {
