@@ -5,6 +5,7 @@ TagManager:
   serializedVersion: 2
   tags:
   - ColAirport
+  - Tag1
   layers:
   - Default
   - TransparentFX
