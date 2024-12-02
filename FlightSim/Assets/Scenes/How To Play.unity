@@ -1226,10 +1226,11 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: "* Accelerate the jet by pressing W/S\n* Use A and D to move left and right\n*
-    Use the up arrow key to fly up and ensure the jet has a decent velocity\n* Use
-    the down arrow key to fly down \n* Use the left and right arrow keys to tilt
-    the plane\n* Use c to switch camera angles\n* Use q to exit\n"
+  m_Text: "* Accelerate the jet by pressing W/S\n* Press A and D to move left and
+    right\n* Press the up arrow key to fly up and ensure the jet has a decent velocity\n*
+    Press the down arrow key to fly down \n* Press the left and right arrow keys
+    to tilt the plane\n* Press i to review instructions\n* Press c to switch camera
+    angles\n* Press q to exit\n"
 --- !u!222 &1907316696
 CanvasRenderer:
   m_ObjectHideFlags: 0

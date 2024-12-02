@@ -53,11 +53,15 @@ public class Movement : MonoBehaviour
         {
             GoToScene();
         }
+        if (Input.GetKeyDown("i")) {
+            GoToScene2();
+        }
         if(transform.position.y <= 1f && isStopforExplosion == false && speed > 0.2f && transform.localRotation.eulerAngles.x > 10 && transform.localRotation.eulerAngles.x < 90) {
             isStopforExplosion = true;
             explosion.Play();
             transform.position += transform.forward * speed * 0 * Time.deltaTime;
             postExplosion.Play();
+            GoToScene2();
         }
         // Movements
         if(Input.GetKey("w") && transform.position.y >= 0.9f) {
@@ -134,6 +138,10 @@ public class Movement : MonoBehaviour
     private void GoToScene() 
     {
         SceneManager.LoadScene("MainMenu");
+    }
+    private void GoToScene2()
+    {
+        SceneManager.LoadScene("How To Play");
     }
 
     private void SetCameraView(int newCamCount)
