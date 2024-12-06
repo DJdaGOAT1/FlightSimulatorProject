@@ -99,7 +99,7 @@ ScriptsOnlyBuild:
     methodName: GoToScene
   - assembly: Assembly-CSharp
     fullTypeName: ButtonScript
-    methodName: GoToScene
+    methodName: QuitApp
   sceneClasses:
     Assets/Scenes/City.unity:
     - Class: 1
@@ -133,14 +133,16 @@ ScriptsOnlyBuild:
     - Class: 108
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 1644}
+      Script: {instanceID: 1656}
     - Class: 114
-      Script: {instanceID: 3332}
+      Script: {instanceID: 2806}
     - Class: 114
-      Script: {instanceID: 5538}
+      Script: {instanceID: 3206}
     - Class: 114
-      Script: {instanceID: 7522}
+      Script: {instanceID: 4840}
     - Class: 115
+      Script: {instanceID: 0}
+    - Class: 134
       Script: {instanceID: 0}
     - Class: 136
       Script: {instanceID: 0}
@@ -186,9 +188,9 @@ ScriptsOnlyBuild:
     - Class: 108
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 1644}
+      Script: {instanceID: 1656}
     - Class: 114
-      Script: {instanceID: 3626}
+      Script: {instanceID: 5354}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 157
@@ -198,6 +200,59 @@ ScriptsOnlyBuild:
     - Class: 198
       Script: {instanceID: 0}
     - Class: 199
+      Script: {instanceID: 0}
+    Assets/Scenes/GameOver.unity:
+    - Class: 1
+      Script: {instanceID: 0}
+    - Class: 4
+      Script: {instanceID: 0}
+    - Class: 20
+      Script: {instanceID: 0}
+    - Class: 21
+      Script: {instanceID: 0}
+    - Class: 28
+      Script: {instanceID: 0}
+    - Class: 48
+      Script: {instanceID: 0}
+    - Class: 81
+      Script: {instanceID: 0}
+    - Class: 89
+      Script: {instanceID: 0}
+    - Class: 104
+      Script: {instanceID: 0}
+    - Class: 108
+      Script: {instanceID: 0}
+    - Class: 114
+      Script: {instanceID: 1694}
+    - Class: 114
+      Script: {instanceID: 2272}
+    - Class: 114
+      Script: {instanceID: 2638}
+    - Class: 114
+      Script: {instanceID: 2806}
+    - Class: 114
+      Script: {instanceID: 2984}
+    - Class: 114
+      Script: {instanceID: 3116}
+    - Class: 114
+      Script: {instanceID: 3206}
+    - Class: 114
+      Script: {instanceID: 3324}
+    - Class: 115
+      Script: {instanceID: 0}
+    - Class: 128
+      Script: {instanceID: 0}
+    - Class: 157
+      Script: {instanceID: 0}
+    - Class: 196
+      Script: {instanceID: 0}
+    - Class: 213
+      Script: {instanceID: 0}
+    - Class: 222
+      Script: {instanceID: 0}
+    - Class: 223
+      Script: {instanceID: 0}
+    - Class: 224
       Script: {instanceID: 0}
     Assets/Scenes/How To Play.unity:
     - Class: 1
@@ -231,23 +286,23 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 748}
     - Class: 114
-      Script: {instanceID: 1660}
+      Script: {instanceID: 1694}
     - Class: 114
-      Script: {instanceID: 1984}
+      Script: {instanceID: 2272}
     - Class: 114
-      Script: {instanceID: 2052}
+      Script: {instanceID: 2410}
     - Class: 114
-      Script: {instanceID: 2182}
+      Script: {instanceID: 2638}
     - Class: 114
-      Script: {instanceID: 2358}
+      Script: {instanceID: 2806}
     - Class: 114
-      Script: {instanceID: 2432}
+      Script: {instanceID: 2984}
     - Class: 114
-      Script: {instanceID: 2538}
+      Script: {instanceID: 3116}
     - Class: 114
-      Script: {instanceID: 5538}
+      Script: {instanceID: 3206}
     - Class: 114
-      Script: {instanceID: 7522}
+      Script: {instanceID: 3324}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -286,23 +341,23 @@ ScriptsOnlyBuild:
     - Class: 108
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 1660}
+      Script: {instanceID: 1694}
     - Class: 114
-      Script: {instanceID: 1984}
+      Script: {instanceID: 2272}
     - Class: 114
-      Script: {instanceID: 2052}
+      Script: {instanceID: 2410}
     - Class: 114
-      Script: {instanceID: 2182}
+      Script: {instanceID: 2638}
     - Class: 114
-      Script: {instanceID: 2358}
+      Script: {instanceID: 2806}
     - Class: 114
-      Script: {instanceID: 2432}
+      Script: {instanceID: 2984}
     - Class: 114
-      Script: {instanceID: 2538}
+      Script: {instanceID: 3116}
     - Class: 114
-      Script: {instanceID: 5538}
+      Script: {instanceID: 3206}
     - Class: 114
-      Script: {instanceID: 7522}
+      Script: {instanceID: 3324}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -351,21 +406,21 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 748}
     - Class: 114
-      Script: {instanceID: 1660}
+      Script: {instanceID: 1694}
     - Class: 114
-      Script: {instanceID: 1984}
+      Script: {instanceID: 2272}
     - Class: 114
-      Script: {instanceID: 2182}
+      Script: {instanceID: 2638}
     - Class: 114
-      Script: {instanceID: 2358}
+      Script: {instanceID: 2806}
     - Class: 114
-      Script: {instanceID: 2432}
+      Script: {instanceID: 2984}
     - Class: 114
-      Script: {instanceID: 2538}
+      Script: {instanceID: 3116}
     - Class: 114
-      Script: {instanceID: 5538}
+      Script: {instanceID: 3206}
     - Class: 114
-      Script: {instanceID: 7522}
+      Script: {instanceID: 3324}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -424,16 +479,18 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 748}
     - Class: 114
-      Script: {instanceID: 1644}
+      Script: {instanceID: 1656}
     - Class: 114
-      Script: {instanceID: 3626}
+      Script: {instanceID: 2806}
     - Class: 114
-      Script: {instanceID: 5538}
+      Script: {instanceID: 3206}
     - Class: 114
-      Script: {instanceID: 7522}
+      Script: {instanceID: 5354}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
+      Script: {instanceID: 0}
+    - Class: 134
       Script: {instanceID: 0}
     - Class: 136
       Script: {instanceID: 0}
@@ -478,6 +535,12 @@ ScriptsOnlyBuild:
     className: Image
   - hash:
       serializedVersion: 2
+      Hash: c7255454f69b7cfe8a3a07bcab4b65a4
+    assemblyName: Unity.ProBuilder
+    namespaceName: UnityEngine.ProBuilder
+    className: ColliderBehaviour
+  - hash:
+      serializedVersion: 2
       Hash: c1e6d5676be64d5a260453eb347b8165
     assemblyName: Cinemachine
     namespaceName: Cinemachine
@@ -488,6 +551,12 @@ ScriptsOnlyBuild:
     assemblyName: Cinemachine
     namespaceName: Cinemachine.PostFX
     className: CinemachineVolumeSettings
+  - hash:
+      serializedVersion: 2
+      Hash: 03e171369c8613a43b4c56d0c8481fe8
+    assemblyName: Unity.ProBuilder
+    namespaceName: UnityEngine.ProBuilder
+    className: PreferenceDictionary
   - hash:
       serializedVersion: 2
       Hash: 751e5bae2a317288c2ab58d66687092b
@@ -604,6 +673,12 @@ ScriptsOnlyBuild:
     className: Text
   - hash:
       serializedVersion: 2
+      Hash: 49031f0904f24a521ccdec39bbd92cba
+    assemblyName: UnityEngine.TestRunner
+    namespaceName: UnityEngine.TestTools.TestRunner
+    className: PlaymodeTestsController
+  - hash:
+      serializedVersion: 2
       Hash: 6f67dd406ddfc18c9b3f8a90725c6266
     assemblyName: UnityEngine.UI
     namespaceName: UnityEngine.UI
@@ -632,6 +707,12 @@ ScriptsOnlyBuild:
     assemblyName: Assembly-CSharp
     namespaceName: Cinemachine.Examples
     className: PlayerMove
+  - hash:
+      serializedVersion: 2
+      Hash: 73badd6c839f4c397ed1708588a757e3
+    assemblyName: Unity.TerrainTools
+    namespaceName: 
+    className: TerrainGroup
   - hash:
       serializedVersion: 2
       Hash: a49a017b805bc6b5963903daa5333d5d
@@ -676,6 +757,12 @@ ScriptsOnlyBuild:
     className: CinemachineConfiner2D
   - hash:
       serializedVersion: 2
+      Hash: 751e5bae2a317288c2ab58d66687092b
+    assemblyName: FbxBuildTestAssets
+    namespaceName: Autodesk.Fbx.BuildTests
+    className: ExportEmptyFbx
+  - hash:
+      serializedVersion: 2
       Hash: 3aa97eda92c00ff0f6ff58a0db58368f
     assemblyName: Cinemachine
     namespaceName: Cinemachine
@@ -700,6 +787,12 @@ ScriptsOnlyBuild:
     className: InvokeEventFromInspector
   - hash:
       serializedVersion: 2
+      Hash: bcdedb1b3a567eb05111be4716618ce1
+    assemblyName: UnityEngine.UI
+    namespaceName: UnityEngine.EventSystems
+    className: EventSystem
+  - hash:
+      serializedVersion: 2
       Hash: e6167bf3ebe3ebce5c4a6d06a0bcdb83
     assemblyName: Assembly-CSharp
     namespaceName: Cinemachine.Examples
@@ -710,6 +803,24 @@ ScriptsOnlyBuild:
     assemblyName: Unity.Timeline
     namespaceName: UnityEngine.Timeline
     className: AudioTrack
+  - hash:
+      serializedVersion: 2
+      Hash: c275a6376cff59450ce0763300b47cca
+    assemblyName: Unity.Polybrush
+    namespaceName: Polybrush
+    className: z_AdditionalVertexStreams
+  - hash:
+      serializedVersion: 2
+      Hash: bf8e7513a6a15e836c34b697fcf2ccd7
+    assemblyName: Unity.Timeline
+    namespaceName: UnityEngine.Timeline
+    className: TimelineAsset
+  - hash:
+      serializedVersion: 2
+      Hash: 9ef1bf2a5a8c63d2f9b58befcb2c2480
+    assemblyName: Unity.ProBuilder
+    namespaceName: UnityEngine.ProBuilder.Shapes
+    className: ProBuilderShape
   - hash:
       serializedVersion: 2
       Hash: 751e5bae2a317288c2ab58d66687092b
@@ -736,6 +847,18 @@ ScriptsOnlyBuild:
     className: MixingCameraBlend
   - hash:
       serializedVersion: 2
+      Hash: 433541aaaa984fd6409b04a02a661444
+    assemblyName: Unity.ProBuilder
+    namespaceName: UnityEngine.ProBuilder
+    className: ColorPalette
+  - hash:
+      serializedVersion: 2
+      Hash: 751e5bae2a317288c2ab58d66687092b
+    assemblyName: UnityEngine.TestRunner
+    namespaceName: UnityEngine.TestRunner.Utils
+    className: TestRunCallbackListener
+  - hash:
+      serializedVersion: 2
       Hash: 6498fc76484598db46c5c1a11bab42fa
     assemblyName: UnityEngine.UI
     namespaceName: UnityEngine.UI
@@ -748,10 +871,22 @@ ScriptsOnlyBuild:
     className: InputField
   - hash:
       serializedVersion: 2
+      Hash: f775775d34f947c68397da7bf91c15ee
+    assemblyName: Unity.ProBuilder
+    namespaceName: UnityEngine.ProBuilder
+    className: Entity
+  - hash:
+      serializedVersion: 2
       Hash: 53e4039886b9c61cc4eba443209a05db
     assemblyName: Assembly-CSharp
     namespaceName: Cinemachine.Examples
     className: CameraMagnetProperty
+  - hash:
+      serializedVersion: 2
+      Hash: 751e5bae2a317288c2ab58d66687092b
+    assemblyName: UnityEngine.TestRunner
+    namespaceName: UnityEngine.TestTools.TestRunner.Callbacks
+    className: TestResultRendererCallback
   - hash:
       serializedVersion: 2
       Hash: 751e5bae2a317288c2ab58d66687092b
@@ -778,6 +913,24 @@ ScriptsOnlyBuild:
     className: Cinemachine3rdPersonFollow
   - hash:
       serializedVersion: 2
+      Hash: 751d867553f413cde86fe5db0b02780d
+    assemblyName: UnityEngine.UI
+    namespaceName: UnityEngine.EventSystems
+    className: StandaloneInputModule
+  - hash:
+      serializedVersion: 2
+      Hash: e021fae07b7c73933e18725f76623e21
+    assemblyName: UnityEngine.UI
+    namespaceName: UnityEngine.UI
+    className: Scrollbar
+  - hash:
+      serializedVersion: 2
+      Hash: 0c34dad2e0e0ef354f592e1a5edf30ff
+    assemblyName: Unity.ProBuilder
+    namespaceName: UnityEngine.ProBuilder
+    className: BezierShape
+  - hash:
+      serializedVersion: 2
       Hash: be140ea01a11255b651c097661ac55b1
     assemblyName: Unity.Timeline
     namespaceName: UnityEngine.Timeline
@@ -794,6 +947,12 @@ ScriptsOnlyBuild:
     assemblyName: Cinemachine
     namespaceName: Cinemachine
     className: CinemachineImpulseSource
+  - hash:
+      serializedVersion: 2
+      Hash: a03cf6f60c605d858f83449f4b4fc400
+    assemblyName: UnityEngine.TestRunner
+    namespaceName: UnityEngine.TestTools
+    className: BeforeAfterTestCommandState
   - hash:
       serializedVersion: 2
       Hash: a4d905db69ca7f45f45458ae380fb66f
@@ -824,6 +983,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.Formats.Fbx.Runtime
     namespaceName: UnityEngine.Formats.Fbx.Exporter
     className: FbxPrefab
+  - hash:
+      serializedVersion: 2
+      Hash: c7255454f69b7cfe8a3a07bcab4b65a4
+    assemblyName: Unity.ProBuilder
+    namespaceName: UnityEngine.ProBuilder
+    className: TriggerBehaviour
   - hash:
       serializedVersion: 2
       Hash: 0249933f35dcc970b31eaae0159aebf9
@@ -869,6 +1034,12 @@ ScriptsOnlyBuild:
   - hash:
       serializedVersion: 2
       Hash: 751e5bae2a317288c2ab58d66687092b
+    assemblyName: UnityEngine.TestRunner
+    namespaceName: UnityEngine.TestTools.TestRunner.Callbacks
+    className: PlayerQuitHandler
+  - hash:
+      serializedVersion: 2
+      Hash: 751e5bae2a317288c2ab58d66687092b
     assemblyName: UnityEngine.UI
     namespaceName: UnityEngine.EventSystems
     className: BaseInput
@@ -904,6 +1075,12 @@ ScriptsOnlyBuild:
     className: Physics2DRaycaster
   - hash:
       serializedVersion: 2
+      Hash: 751e5bae2a317288c2ab58d66687092b
+    assemblyName: UnityEngine.TestRunner
+    namespaceName: UnityEngine.TestTools.TestRunner.Callbacks
+    className: PlayModeRunnerCallback
+  - hash:
+      serializedVersion: 2
       Hash: c343da5828fddd0a899e69eb0f447fd5
     assemblyName: Unity.Timeline
     namespaceName: UnityEngine.Timeline
@@ -922,10 +1099,22 @@ ScriptsOnlyBuild:
     className: AudioPlayableAsset
   - hash:
       serializedVersion: 2
+      Hash: cc45e39aeb99e57722ebd11e4fd2b263
+    assemblyName: Unity.Polybrush
+    namespaceName: UnityEngine.Polybrush
+    className: PolybrushMesh
+  - hash:
+      serializedVersion: 2
       Hash: 04bf8dba8e867e9c3c936355c18443e4
     assemblyName: Cinemachine
     namespaceName: Cinemachine
     className: CinemachineTransposer
+  - hash:
+      serializedVersion: 2
+      Hash: 751e5bae2a317288c2ab58d66687092b
+    assemblyName: UnityEngine.TestRunner
+    namespaceName: UnityEngine.TestTools.TestRunner.Callbacks
+    className: RemoteTestResultSender
   - hash:
       serializedVersion: 2
       Hash: c92e03126f82226c2e517b0c562a3094
@@ -946,6 +1135,12 @@ ScriptsOnlyBuild:
     className: CameraMagnetTargetController
   - hash:
       serializedVersion: 2
+      Hash: 8df74a4ea76609d25c6d9a338445bbd4
+    assemblyName: Unity.Polybrush
+    namespaceName: UnityEngine.Polybrush
+    className: OverlayRenderer
+  - hash:
+      serializedVersion: 2
       Hash: 21458b64fdf3b1c35574c2a0e82b859d
     assemblyName: UnityEngine.UI
     namespaceName: UnityEngine.UI
@@ -962,6 +1157,12 @@ ScriptsOnlyBuild:
     assemblyName: Cinemachine
     namespaceName: Cinemachine
     className: CinemachineIndependentImpulseListener
+  - hash:
+      serializedVersion: 2
+      Hash: b8ff5f5d94455deb9dce0f32a8a2ef48
+    assemblyName: Unity.ProBuilder
+    namespaceName: UnityEngine.ProBuilder
+    className: PolyShape
   - hash:
       serializedVersion: 2
       Hash: be140ea01a11255b651c097661ac55b1
@@ -1030,10 +1231,22 @@ ScriptsOnlyBuild:
     className: CinemachineTouchInputMapper
   - hash:
       serializedVersion: 2
+      Hash: 98db835dd0659d490ded675102354289
+    assemblyName: Unity.Timeline
+    namespaceName: UnityEngine.Timeline
+    className: ControlPlayableAsset
+  - hash:
+      serializedVersion: 2
       Hash: f6db34ec3c3d6330db9685fc47bcbbd5
     assemblyName: Cinemachine
     namespaceName: Cinemachine
     className: CinemachineStoryboard
+  - hash:
+      serializedVersion: 2
+      Hash: 751e5bae2a317288c2ab58d66687092b
+    assemblyName: Unity.Polybrush
+    namespaceName: UnityEngine.Polybrush
+    className: ZoomOverride
   - hash:
       serializedVersion: 2
       Hash: d29f928cecd19b22fdd2e3a756e131c0
@@ -1192,6 +1405,12 @@ ScriptsOnlyBuild:
     className: CinemachineComposer
   - hash:
       serializedVersion: 2
+      Hash: 283263892333d82961e47691571eaa1a
+    assemblyName: Unity.ProBuilder
+    namespaceName: UnityEngine.ProBuilder
+    className: ProBuilderMesh
+  - hash:
+      serializedVersion: 2
       Hash: 751e5bae2a317288c2ab58d66687092b
     assemblyName: Assembly-CSharp
     namespaceName: Cinemachine.Examples
@@ -1226,168 +1445,6 @@ ScriptsOnlyBuild:
     assemblyName: Assembly-CSharp
     namespaceName: 
     className: MovementWinter
-  - hash:
-      serializedVersion: 2
-      Hash: 49031f0904f24a521ccdec39bbd92cba
-    assemblyName: UnityEngine.TestRunner
-    namespaceName: UnityEngine.TestTools.TestRunner
-    className: PlaymodeTestsController
-  - hash:
-      serializedVersion: 2
-      Hash: 751e5bae2a317288c2ab58d66687092b
-    assemblyName: UnityEngine.TestRunner
-    namespaceName: UnityEngine.TestTools.TestRunner.Callbacks
-    className: RemoteTestResultSender
-  - hash:
-      serializedVersion: 2
-      Hash: 03e171369c8613a43b4c56d0c8481fe8
-    assemblyName: Unity.ProBuilder
-    namespaceName: UnityEngine.ProBuilder
-    className: PreferenceDictionary
-  - hash:
-      serializedVersion: 2
-      Hash: 283263892333d82961e47691571eaa1a
-    assemblyName: Unity.ProBuilder
-    namespaceName: UnityEngine.ProBuilder
-    className: ProBuilderMesh
-  - hash:
-      serializedVersion: 2
-      Hash: c275a6376cff59450ce0763300b47cca
-    assemblyName: Unity.Polybrush
-    namespaceName: Polybrush
-    className: z_AdditionalVertexStreams
-  - hash:
-      serializedVersion: 2
-      Hash: bcdedb1b3a567eb05111be4716618ce1
-    assemblyName: UnityEngine.UI
-    namespaceName: UnityEngine.EventSystems
-    className: EventSystem
-  - hash:
-      serializedVersion: 2
-      Hash: c7255454f69b7cfe8a3a07bcab4b65a4
-    assemblyName: Unity.ProBuilder
-    namespaceName: UnityEngine.ProBuilder
-    className: ColliderBehaviour
-  - hash:
-      serializedVersion: 2
-      Hash: 98db835dd0659d490ded675102354289
-    assemblyName: Unity.Timeline
-    namespaceName: UnityEngine.Timeline
-    className: ControlPlayableAsset
-  - hash:
-      serializedVersion: 2
-      Hash: 751e5bae2a317288c2ab58d66687092b
-    assemblyName: UnityEngine.TestRunner
-    namespaceName: UnityEngine.TestRunner.Utils
-    className: TestRunCallbackListener
-  - hash:
-      serializedVersion: 2
-      Hash: 751e5bae2a317288c2ab58d66687092b
-    assemblyName: UnityEngine.TestRunner
-    namespaceName: UnityEngine.TestTools.TestRunner.Callbacks
-    className: PlayerQuitHandler
-  - hash:
-      serializedVersion: 2
-      Hash: f775775d34f947c68397da7bf91c15ee
-    assemblyName: Unity.ProBuilder
-    namespaceName: UnityEngine.ProBuilder
-    className: Entity
-  - hash:
-      serializedVersion: 2
-      Hash: 751e5bae2a317288c2ab58d66687092b
-    assemblyName: Unity.Polybrush
-    namespaceName: UnityEngine.Polybrush
-    className: ZoomOverride
-  - hash:
-      serializedVersion: 2
-      Hash: e021fae07b7c73933e18725f76623e21
-    assemblyName: UnityEngine.UI
-    namespaceName: UnityEngine.UI
-    className: Scrollbar
-  - hash:
-      serializedVersion: 2
-      Hash: 751e5bae2a317288c2ab58d66687092b
-    assemblyName: FbxBuildTestAssets
-    namespaceName: Autodesk.Fbx.BuildTests
-    className: ExportEmptyFbx
-  - hash:
-      serializedVersion: 2
-      Hash: 8df74a4ea76609d25c6d9a338445bbd4
-    assemblyName: Unity.Polybrush
-    namespaceName: UnityEngine.Polybrush
-    className: OverlayRenderer
-  - hash:
-      serializedVersion: 2
-      Hash: cc45e39aeb99e57722ebd11e4fd2b263
-    assemblyName: Unity.Polybrush
-    namespaceName: UnityEngine.Polybrush
-    className: PolybrushMesh
-  - hash:
-      serializedVersion: 2
-      Hash: 0c34dad2e0e0ef354f592e1a5edf30ff
-    assemblyName: Unity.ProBuilder
-    namespaceName: UnityEngine.ProBuilder
-    className: BezierShape
-  - hash:
-      serializedVersion: 2
-      Hash: b8ff5f5d94455deb9dce0f32a8a2ef48
-    assemblyName: Unity.ProBuilder
-    namespaceName: UnityEngine.ProBuilder
-    className: PolyShape
-  - hash:
-      serializedVersion: 2
-      Hash: 73badd6c839f4c397ed1708588a757e3
-    assemblyName: Unity.TerrainTools
-    namespaceName: 
-    className: TerrainGroup
-  - hash:
-      serializedVersion: 2
-      Hash: 9ef1bf2a5a8c63d2f9b58befcb2c2480
-    assemblyName: Unity.ProBuilder
-    namespaceName: UnityEngine.ProBuilder.Shapes
-    className: ProBuilderShape
-  - hash:
-      serializedVersion: 2
-      Hash: 751e5bae2a317288c2ab58d66687092b
-    assemblyName: UnityEngine.TestRunner
-    namespaceName: UnityEngine.TestTools.TestRunner.Callbacks
-    className: PlayModeRunnerCallback
-  - hash:
-      serializedVersion: 2
-      Hash: 433541aaaa984fd6409b04a02a661444
-    assemblyName: Unity.ProBuilder
-    namespaceName: UnityEngine.ProBuilder
-    className: ColorPalette
-  - hash:
-      serializedVersion: 2
-      Hash: c7255454f69b7cfe8a3a07bcab4b65a4
-    assemblyName: Unity.ProBuilder
-    namespaceName: UnityEngine.ProBuilder
-    className: TriggerBehaviour
-  - hash:
-      serializedVersion: 2
-      Hash: 751d867553f413cde86fe5db0b02780d
-    assemblyName: UnityEngine.UI
-    namespaceName: UnityEngine.EventSystems
-    className: StandaloneInputModule
-  - hash:
-      serializedVersion: 2
-      Hash: a03cf6f60c605d858f83449f4b4fc400
-    assemblyName: UnityEngine.TestRunner
-    namespaceName: UnityEngine.TestTools
-    className: BeforeAfterTestCommandState
-  - hash:
-      serializedVersion: 2
-      Hash: bf8e7513a6a15e836c34b697fcf2ccd7
-    assemblyName: Unity.Timeline
-    namespaceName: UnityEngine.Timeline
-    className: TimelineAsset
-  - hash:
-      serializedVersion: 2
-      Hash: 751e5bae2a317288c2ab58d66687092b
-    assemblyName: UnityEngine.TestRunner
-    namespaceName: UnityEngine.TestTools.TestRunner.Callbacks
-    className: TestResultRendererCallback
   platform: 19
   scenePathNames:
   - Assets/Scenes/MainMenu.unity
@@ -1396,4 +1453,5 @@ ScriptsOnlyBuild:
   - Assets/Scenes/Winter.unity
   - Assets/Scenes/City.unity
   - Assets/Scenes/Desert.unity
+  - Assets/Scenes/GameOver.unity
   playerPath: C:/Users/S925012/Downloads/New Unity Project_Data/New Unity Project.exe

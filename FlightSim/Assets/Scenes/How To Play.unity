@@ -1190,7 +1190,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -252, y: 77}
+  m_AnchoredPosition: {x: -237, y: 77}
   m_SizeDelta: {x: 535.0049, y: 73.0113}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1907316695
@@ -1227,10 +1227,9 @@ MonoBehaviour:
     m_VerticalOverflow: 1
     m_LineSpacing: 1
   m_Text: "* Accelerate the jet by pressing W/S\n* Press A and D to move left and
-    right\n* Press the up arrow key to fly up and ensure the jet has a decent velocity\n*
-    Press the down arrow key to fly down \n* Press the left and right arrow keys
-    to tilt the plane\n* Press i to review instructions\n* Press c to switch camera
-    angles\n* Press q to exit\n"
+    right\n* Press the up/down arrow keys to tilt and fly up/down\n* Press the left
+    and right arrow keys to tilt the plane along roll axis\n* Press i to review instructions\n*
+    Press c to switch camera angles\n* Press q to return to MainMenu \n"
 --- !u!222 &1907316696
 CanvasRenderer:
   m_ObjectHideFlags: 0

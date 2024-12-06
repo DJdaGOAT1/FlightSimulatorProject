@@ -51,6 +51,9 @@ public class MovementWinter : MonoBehaviour
         {
             GoToScene();
         }
+        if (Input.GetKeyDown("i")) {
+            GoToScene2();
+        }
         if(transform.position.y <= 1f && isStopforExplosion == false && speed > 0.2f && transform.localRotation.eulerAngles.x > 10 && transform.localRotation.eulerAngles.x < 90) {
             isStopforExplosion = true;
             explosion.Play();
@@ -65,13 +68,7 @@ public class MovementWinter : MonoBehaviour
         }
 
         if(Input.GetKey("a")) {
-            if(transform.position.y >= 1f)
-            {
-                transform.Rotate(Vector3.up, -rotSpeed * Time.deltaTime); // Move left
-            }
-            if(transform.position.y <= 1f && transform.localRotation.eulerAngles.x >= 0 && transform.localRotation.eulerAngles.x <= 10) {
-                transform.Rotate(Vector3.up, -rotSpeed * Time.deltaTime);
-            }
+            transform.Rotate(Vector3.up, -rotSpeed * Time.deltaTime);
         }
 
         if(Input.GetKey("s") && transform.position.y >= 0.9f) {
@@ -80,13 +77,7 @@ public class MovementWinter : MonoBehaviour
         }
 
         if(Input.GetKey("d")) {
-            if(transform.position.y >= 1f)
-            {
-                transform.Rotate(Vector3.up, rotSpeed * Time.deltaTime); // Move left
-            }
-            if(transform.position.y <= 1f && transform.localRotation.eulerAngles.x >= 0 && transform.localRotation.eulerAngles.x <= 10) {
-                transform.Rotate(Vector3.up, rotSpeed * Time.deltaTime);
-            }
+            transform.Rotate(Vector3.up, rotSpeed * Time.deltaTime);
         }
 
         // Rotations
@@ -104,11 +95,13 @@ public class MovementWinter : MonoBehaviour
         {
             transform.Rotate(Vector3.right, rotSpeed * Time.deltaTime);
         }
-        if (Input.GetKey("left") && transform.position.y > 1.5f) { // rolling
+        if (Input.GetKey("left") && transform.position.y > 1.2f) { // rolling
             transform.Rotate(Vector3.forward, rotSpeed * Time.deltaTime);
+            transform.Rotate(Vector3.up, -rotSpeed * Time.deltaTime);
         }
-        if (Input.GetKey("right") && transform.position.y > 1.5f ) {// rolling
+        if (Input.GetKey("right") && transform.position.y > 1.2f ) {// rolling
             transform.Rotate(Vector3.forward, -rotSpeed * Time.deltaTime);
+            transform.Rotate(Vector3.up, rotSpeed * Time.deltaTime);
         }
 
         if(transform.position.y >= 0.9f && speed != 0f) {
@@ -131,6 +124,9 @@ public class MovementWinter : MonoBehaviour
     private void GoToScene() 
     {
         SceneManager.LoadScene("MainMenu");
+    }
+    private void GoToScene2() {
+        SceneManager.LoadScene("How To Play");
     }
 
     private void SetCameraView(int newCamCount)
