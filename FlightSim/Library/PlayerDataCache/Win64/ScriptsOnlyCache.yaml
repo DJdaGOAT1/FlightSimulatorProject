@@ -7,35 +7,15 @@ ScriptsOnlyBuild:
     - MovementWinter
     Unity.TerrainTools.Editor.dll:
     - UnityEditor.TerrainTools.BillowNoise
-    - UnityEditor.TerrainTools.BridgeTool
-    - UnityEditor.TerrainTools.CloneBrushTool
-    - UnityEditor.TerrainTools.ContrastTool
-    - UnityEditor.TerrainTools.DetailScatterTool
     - UnityEditor.TerrainTools.FbmFractalType
-    - UnityEditor.TerrainTools.HydroErosionTool
     - UnityEditor.TerrainTools.NoiseBlitShaderGenerator
     - UnityEditor.TerrainTools.NoiseFillShaderGenerator
-    - UnityEditor.TerrainTools.NoiseHeightTool
     - UnityEditor.TerrainTools.NoneFractalType
-    - UnityEditor.TerrainTools.PaintHeightTool
-    - UnityEditor.TerrainTools.PaintHolesTool
-    - UnityEditor.TerrainTools.PaintTextureTool
     - UnityEditor.TerrainTools.PerlinNoise
-    - UnityEditor.TerrainTools.PinchHeightTool
     - UnityEditor.TerrainTools.RidgeNoise
-    - UnityEditor.TerrainTools.SetHeightTool
-    - UnityEditor.TerrainTools.SharpenPeaksTool
-    - UnityEditor.TerrainTools.SlopeFlattenTool
-    - UnityEditor.TerrainTools.SmoothHeightTool
-    - UnityEditor.TerrainTools.SmudgeHeightTool
-    - UnityEditor.TerrainTools.StampTool
     - UnityEditor.TerrainTools.StrataFractalType
-    - UnityEditor.TerrainTools.TerraceErosion
-    - UnityEditor.TerrainTools.ThermalErosionTool
-    - UnityEditor.TerrainTools.TwistHeightTool
     - UnityEditor.TerrainTools.ValueNoise
     - UnityEditor.TerrainTools.VoronoiNoise
-    - UnityEditor.TerrainTools.WindErosionTool
     UnityEditor.TestRunner.dll:
     - UnityEditor.TestTools.TestRunner.Api.CallbacksHolder
     - UnityEditor.TestTools.TestRunner.TestListCacheData
@@ -100,6 +80,9 @@ ScriptsOnlyBuild:
   - assembly: Assembly-CSharp
     fullTypeName: ButtonScript
     methodName: QuitApp
+  - assembly: Assembly-CSharp
+    fullTypeName: ButtonScript
+    methodName: GoToScene
   sceneClasses:
     Assets/Scenes/City.unity:
     - Class: 1
@@ -1454,4 +1437,4 @@ ScriptsOnlyBuild:
   - Assets/Scenes/City.unity
   - Assets/Scenes/Desert.unity
   - Assets/Scenes/GameOver.unity
-  playerPath: C:/Users/S925012/Downloads/New Unity Project_Data/New Unity Project.exe
+  playerPath: C:/Users/Joshi/Downloads/New Unity Project.exe
